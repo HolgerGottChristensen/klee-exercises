@@ -1,0 +1,4 @@
+klee --only-output-states-covering-new combined_ace_arbiter.bc
+PID: 77325
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2022-11-02 10:19:55

@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: combined_ace_arbiter.c
+Line: 56
+assembly.ll line: 276
+State: 1
+Stack: 
+	#000000276 in ace_arbiter_1 (, =4396679816, =4396679944) at combined_ace_arbiter.c:56
+	#100001118 in main () at combined_ace_arbiter.c:219
+Info: 
+	address: (Add w64 4396679816
+          (Mul w64 4
+                   (SExt w64 (ReadLSB w32 0 a))))
+	example: 4396679820
+	range: [4396679820, 4396679820]
+	next: object at 4381722156 of size 4
+		MO26[4] (no allocation info)

@@ -1,0 +1,7 @@
+Error: external call with symbolic argument: printf
+File: combined_ace_arbiter.c
+Line: 202
+assembly.ll line: 1044
+State: 1
+Stack: 
+	#000001044 in main () at combined_ace_arbiter.c:202

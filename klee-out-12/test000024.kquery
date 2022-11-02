@@ -1,0 +1,85 @@
+array a[4] : w32 -> w8 = symbolic
+array x[400] : w32 -> w8 = symbolic
+array y[400] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 a))
+         (Sle N0 4)
+         (Sle 0
+              (ReadLSB w32 0 x))
+         (Sle (ReadLSB w32 0 y)
+              11)
+         (Slt 1 N0)
+         (Sle 0
+              (ReadLSB w32 4 x))
+         (Sle (ReadLSB w32 4 y)
+              11)
+         (Slt 2 N0)
+         (Sle 0
+              (ReadLSB w32 8 x))
+         (Sle (ReadLSB w32 8 y)
+              11)
+         (Slt 3 N0)
+         (Sle 0
+              (ReadLSB w32 12 x))
+         (Sle (ReadLSB w32 12 y)
+              11)
+         (Or (Eq 0
+                 N1:(SRem w32 (Add w32 12
+                                       N2:(ReadLSB w32 4 U0:[N3:(Add w32 3
+                                                                         N4:(Extract w32 0 (Mul w64 4
+                                                                                                    (SExt w64 (Add w32 4294967293 N0)))))=(Read w8 N5:(Add w32 3
+                                                                                                                                                               N6:(Extract w32 0 (Mul w64 4
+                                                                                                                                                                                          (SExt w64 (Add w32 4294967292 N0))))) U1:[N7:(Add w32 3
+                                                                                                                                                                                                                                                N8:(Extract w32 0 (Mul w64 4
+                                                                                                                                                                                                                                                                           (SExt w64 (Add w32 4294967294 N0)))))=(Read w8 N3 U2:[N9:(Add w32 3
+                                                                                                                                                                                                                                                                                                                                             N10:(Extract w32 0 (Mul w64 4
+                                                                                                                                                                                                                                                                                                                                                                         (SExt w64 (Add w32 4294967295 N0)))))=(Read w8 N7 U3:[N11:(Add w32 3
+                                                                                                                                                                                                                                                                                                                                                                                                                                            N12:(Extract w32 0 (Mul w64 4 (SExt w64 N0))))=(Read w8 N9 y),
+                                                                                                                                                                                                                                                                                                                                                                                                                               N13:(Add w32 2 N12)=(Read w8 N14:(Add w32 2 N10) y),
+                                                                                                                                                                                                                                                                                                                                                                                                                               N15:(Add w32 1 N12)=(Read w8 N16:(Add w32 1 N10) y),
+                                                                                                                                                                                                                                                                                                                                                                                                                               N12=(Read w8 N10 y)] @ y),
+                                                                                                                                                                                                                                                                                                                                 N14=(Read w8 N17:(Add w32 2 N8) U3),
+                                                                                                                                                                                                                                                                                                                                 N16=(Read w8 N18:(Add w32 1 N8) U3),
+                                                                                                                                                                                                                                                                                                                                 N10=(Read w8 N8 U3)] @ U3),
+                                                                                                                                                                                                                                    N17=(Read w8 N19:(Add w32 2 N4) U2),
+                                                                                                                                                                                                                                    N18=(Read w8 N20:(Add w32 1 N4) U2),
+                                                                                                                                                                                                                                    N8=(Read w8 N4 U2)] @ U2),
+                                                             N19=(Read w8 N21:(Add w32 2 N6) U1),
+                                                             N20=(Read w8 N22:(Add w32 1 N6) U1),
+                                                             N4=(Read w8 N6 U1)] @ U1))
+                              4))
+             (Eq 1 N1))
+         (Sle 0 N23:(Add w32 11 N2))
+         (Sle 0 N2)
+         (Or (Eq 0
+                 N24:(SRem w32 (Add w32 12
+                                        N25:(ReadLSB w32 8 U0))
+                               4))
+             (Eq 1 N24))
+         (Sle N23 N26:(Add w32 11 N25))
+         (Eq 11
+             (ReadLSB w32 4 U4:[N3=(Read w8 N5 U5:[N7=(Read w8 N3 U6:[N9=(Read w8 N7 U7:[N11=(Read w8 N9 x),
+                                                                                         N13=(Read w8 N14 x),
+                                                                                         N15=(Read w8 N16 x),
+                                                                                         N12=(Read w8 N10 x)] @ x),
+                                                                      N14=(Read w8 N17 U7),
+                                                                      N16=(Read w8 N18 U7),
+                                                                      N10=(Read w8 N8 U7)] @ U7),
+                                                   N17=(Read w8 N19 U6),
+                                                   N18=(Read w8 N20 U6),
+                                                   N8=(Read w8 N4 U6)] @ U6),
+                                N19=(Read w8 N21 U5),
+                                N20=(Read w8 N22 U5),
+                                N4=(Read w8 N6 U5)] @ U5))
+         (Eq N2 N25)
+         (Or (Eq 0
+                 N27:(SRem w32 (Add w32 1
+                                        N28:(Add w32 (ReadLSB w32 12 U4)
+                                                     N29:(ReadLSB w32 12 U0)))
+                               4))
+             (Eq 1 N27))
+         (Sle N26 N28)
+         (Eq 11
+             (ReadLSB w32 8 U4))
+         (Eq N25 N29)]
+        false)

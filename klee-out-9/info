@@ -1,0 +1,23 @@
+klee --only-output-states-covering-new --external-calls=all combined_ace_arbiter.bc
+PID: 88566
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2022-11-02 10:24:25
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2022-11-02 10:24:37
+Elapsed: 00:00:12
+KLEE: done: explored paths = 464
+KLEE: done: avg. constructs per query = 328
+KLEE: done: total queries = 2063
+KLEE: done: valid queries = 1266
+KLEE: done: invalid queries = 797
+KLEE: done: query cex = 2063
+
+KLEE: done: total instructions = 56755
+KLEE: done: completed paths = 198
+KLEE: done: partially completed paths = 266
+KLEE: done: generated tests = 25

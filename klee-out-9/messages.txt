@@ -1,0 +1,4 @@
+KLEE: Using STP solver backend
+KLEE: ERROR: combined_ace_arbiter.c:223: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: halting execution, dumping remaining states

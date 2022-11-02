@@ -1,0 +1,7 @@
+Error: invalid klee_assume call (provably false)
+File: combined_ace_arbiter.c
+Line: 225
+assembly.ll line: 1114
+State: 232
+Stack: 
+	#000001114 in main () at combined_ace_arbiter.c:225

@@ -1,0 +1,53 @@
+array a[4] : w32 -> w8 = symbolic
+array x[400] : w32 -> w8 = symbolic
+array y[400] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 a))
+         (Sle N0 4)
+         (Sle 0
+              N1:(ReadLSB w32 0 y))
+         (Sle N1 11)
+         (Slt 1 N0)
+         (Sle 0
+              N2:(ReadLSB w32 4 y))
+         (Sle N2 11)
+         (Eq false (Slt 2 N0))
+         (Or (Eq 0
+                 N3:(SRem w32 (Add w32 1
+                                       N4:(Add w32 N5:(ReadLSB w32 4 U0:[N6:(Add w32 3
+                                                                                     N7:(Extract w32 0 (Mul w64 4
+                                                                                                                (SExt w64 (Add w32 4294967295 N0)))))=(Read w8 N8:(Add w32 3
+                                                                                                                                                                           N9:(Extract w32 0 (Mul w64 4
+                                                                                                                                                                                                      (SExt w64 (Add w32 4294967294 N0))))) U1:[N10:(Add w32 3
+                                                                                                                                                                                                                                                             N11:(Extract w32 0 (Mul w64 4 (SExt w64 N0))))=(Read w8 N6 x),
+                                                                                                                                                                                                                                                N12:(Add w32 2 N11)=(Read w8 N13:(Add w32 2 N7) x),
+                                                                                                                                                                                                                                                N14:(Add w32 1 N11)=(Read w8 N15:(Add w32 1 N7) x),
+                                                                                                                                                                                                                                                N11=(Read w8 N7 x)] @ x),
+                                                                         N13=(Read w8 N16:(Add w32 2 N9) U1),
+                                                                         N15=(Read w8 N17:(Add w32 1 N9) U1),
+                                                                         N7=(Read w8 N9 U1)] @ U1)
+                                                   N18:(ReadLSB w32 4 U2:[N6=(Read w8 N8 U3:[N10=(Read w8 N6 y),
+                                                                                             N12=(Read w8 N13 y),
+                                                                                             N14=(Read w8 N15 y),
+                                                                                             N11=(Read w8 N7 y)] @ y),
+                                                                          N13=(Read w8 N16 U3),
+                                                                          N15=(Read w8 N17 U3),
+                                                                          N7=(Read w8 N9 U3)] @ U3)))
+                              4))
+             (Eq 1 N3))
+         (Or (Eq 0
+                 N19:(SRem w32 (Add w32 1
+                                        N20:(Add w32 N21:(ReadLSB w32 8 U0)
+                                                     N22:(ReadLSB w32 8 U2)))
+                               4))
+             (Eq 1 N19))
+         (Sle N4 N20)
+         (Eq false (Eq 11 N5))
+         (Eq false (Eq 11 N18))
+         (Sle N5 N21)
+         (Eq false (Sle N18 N22))
+         (Eq 0
+             (ReadLSB w32 0 x))
+         (Eq 11
+             (ReadLSB w32 4 x))]
+        false)

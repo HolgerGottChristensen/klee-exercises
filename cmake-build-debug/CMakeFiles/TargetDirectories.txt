@@ -1,0 +1,3 @@
+/Users/holgerchristensen/Downloads/equivalence/cmake-build-debug/CMakeFiles/equivalence.dir
+/Users/holgerchristensen/Downloads/equivalence/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/holgerchristensen/Downloads/equivalence/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,12 @@
+Error: concretized symbolic size
+File: combined_ace_arbiter.c
+Line: 202
+assembly.ll line: 1045
+State: 2
+Stack: 
+	#000001045 in main () at combined_ace_arbiter.c:202
+Info: 
+  size expr: (Mul w64 4
+                       (ZExt w64 (ReadLSB w32 0 a)))
+  concretization : 4
+  unbound example: 8

@@ -1,0 +1,141 @@
+array a[4] : w32 -> w8 = symbolic
+array x[400] : w32 -> w8 = symbolic
+array y[400] : w32 -> w8 = symbolic
+(query [(Sle 1
+              N0:(ReadLSB w32 0 a))
+         (Sle N0 100)
+         (Sle 0
+              (ReadLSB w32 0 x))
+         (Sle (ReadLSB w32 0 y)
+              11)
+         (Slt 1 N0)
+         (Sle 0
+              (ReadLSB w32 4 x))
+         (Sle (ReadLSB w32 4 y)
+              11)
+         (Slt 2 N0)
+         (Sle 0
+              (ReadLSB w32 8 x))
+         (Sle (ReadLSB w32 8 y)
+              11)
+         (Slt 3 N0)
+         (Sle 0
+              (ReadLSB w32 12 x))
+         (Sle (ReadLSB w32 12 y)
+              11)
+         (Slt 4 N0)
+         (Sle 0
+              (ReadLSB w32 16 x))
+         (Sle (ReadLSB w32 16 y)
+              11)
+         (Slt 5 N0)
+         (Sle 0
+              (ReadLSB w32 20 x))
+         (Sle (ReadLSB w32 20 y)
+              11)
+         (Slt 6 N0)
+         (Sle 0
+              (ReadLSB w32 24 x))
+         (Sle (ReadLSB w32 24 y)
+              11)
+         (Slt 7 N0)
+         (Sle 0
+              (ReadLSB w32 28 x))
+         (Sle (ReadLSB w32 28 y)
+              11)
+         (Slt 8 N0)
+         (Sle 0
+              (ReadLSB w32 32 x))
+         (Sle (ReadLSB w32 32 y)
+              11)
+         (Slt 9 N0)
+         (Sle 0
+              (ReadLSB w32 36 x))
+         (Sle (ReadLSB w32 36 y)
+              11)
+         (Slt 10 N0)
+         (Sle 0
+              (ReadLSB w32 40 x))
+         (Sle (ReadLSB w32 40 y)
+              11)
+         (Slt 11 N0)
+         (Sle 0
+              (ReadLSB w32 44 x))
+         (Sle (ReadLSB w32 44 y)
+              11)
+         (Slt 12 N0)
+         (Sle 0
+              (ReadLSB w32 48 x))
+         (Sle (ReadLSB w32 48 y)
+              11)
+         (Slt 13 N0)
+         (Sle 0
+              (ReadLSB w32 52 x))
+         (Sle (ReadLSB w32 52 y)
+              11)
+         (Slt 14 N0)
+         (Sle 0
+              (ReadLSB w32 56 x))
+         (Sle (ReadLSB w32 56 y)
+              11)
+         (Slt 15 N0)
+         (Sle 0
+              (ReadLSB w32 60 x))
+         (Sle (ReadLSB w32 60 y)
+              11)
+         (Slt 16 N0)
+         (Sle 0
+              (ReadLSB w32 64 x))
+         (Sle (ReadLSB w32 64 y)
+              11)
+         (Slt 17 N0)
+         (Sle 0
+              (ReadLSB w32 68 x))
+         (Sle (ReadLSB w32 68 y)
+              11)
+         (Slt 18 N0)
+         (Sle 0
+              (ReadLSB w32 72 x))
+         (Sle (ReadLSB w32 72 y)
+              11)
+         (Slt 19 N0)
+         (Sle 0
+              (ReadLSB w32 76 x))
+         (Sle (ReadLSB w32 76 y)
+              11)
+         (Slt 20 N0)
+         (Sle 0
+              (ReadLSB w32 80 x))
+         (Sle (ReadLSB w32 80 y)
+              11)
+         (Slt 21 N0)
+         (Sle 0
+              (ReadLSB w32 84 x))
+         (Sle (ReadLSB w32 84 y)
+              11)
+         (Slt 22 N0)
+         (Sle 0
+              (ReadLSB w32 88 x))
+         (Sle (ReadLSB w32 88 y)
+              11)
+         (Slt 23 N0)
+         (Sle 0
+              (ReadLSB w32 92 x))
+         (Sle (ReadLSB w32 92 y)
+              11)
+         (Slt 24 N0)
+         (Sle 0
+              (ReadLSB w32 96 x))
+         (Sle (ReadLSB w32 96 y)
+              11)
+         (Slt 25 N0)
+         (Sle 0
+              (ReadLSB w32 100 x))
+         (Sle (ReadLSB w32 100 y)
+              11)
+         (Slt 26 N0)
+         (Sle 0
+              (ReadLSB w32 104 x))
+         (Sle (ReadLSB w32 104 y)
+              11)]
+        false)
